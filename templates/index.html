@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ bootstrap.load_css() }}
+    {% from "bootstrap5/form.html" import render_form %}
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-lg-8 col-md-10 mx-auto">
+    <h1>Register a Student?</h1>
+    <a href="{{ url_for('register') }}" class="btn btn-primary btn-block btn-large">Click here</a>
+    <br>
+    <br>
+    <h1>Search for a Student?</h1>
+
+      <!--Rendering the registration form here-->
+      {{render_form(form, novalidate=True, button_map={"submit": "primary"}) }}
+      </div>
+</body>
+</html>

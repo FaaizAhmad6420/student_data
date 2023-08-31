@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ bootstrap.load_css() }}
+    <title>Document</title>
+</head>
+<body>
+    <div class="col-lg-8 col-md-10 mx-auto">
+    <h1>Student Details:</h1>
+    <p>Name: {{user.name.title()}}<br>
+        Class: {{user.Class.upper()}}<br>
+        Section: {{user.section.upper()}}<br>
+        Email: {{user.email}}<br>
+        <a href="{{url_for('update', roll_no=user.roll_no)}}" class="btn btn-primary btn-block btn-large">Update</a>
+        <a href="{{url_for('delete', roll_no=user.roll_no)}}" class="btn btn-primary btn-block btn-large">Delete</a>
+    </p>
+    </div>
+</body>
+</html>
